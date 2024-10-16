@@ -30,6 +30,10 @@ class CustomTextField extends StatelessWidget {
       validator: validator,
       obscureText: obscureText,
       cursorColor: context.appColors.white,
+      style: TextStyle(
+        color: context.appColors.white,
+        fontSize: 14,
+      ),
       decoration: InputDecoration(
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,

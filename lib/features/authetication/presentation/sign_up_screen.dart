@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:service_connect/core/services/custom_navigation.dart';
 import 'package:service_connect/core/utils/src/assets/app_svgs.dart';
 import 'package:service_connect/core/utils/src/theme/app_colors.dart';
 import 'package:service_connect/core/widgets/custom_button.dart';
 import 'package:service_connect/core/widgets/custom_text_field.dart';
-import 'package:service_connect/features/authetication/presentation/sign_up_screen.dart';
 import 'package:service_connect/features/authetication/presentation/widgets/socail_media_button.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +39,7 @@ class LoginScreen extends StatelessWidget {
               ),
               const Gap(60),
               Text(
-                "Let's Log In.!",
+                "Let's Sign Up.!",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
@@ -50,7 +48,7 @@ class LoginScreen extends StatelessWidget {
               ),
               const Gap(8),
               Text(
-                "Login to Your Account to Continue your Course",
+                "Sign Up to Your Account to Continue your Course",
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w500,
@@ -83,46 +81,7 @@ class LoginScreen extends StatelessWidget {
                 hintText: "Password",
                 obscureText: true,
               ),
-              const Gap(20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      SizedBox(
-                        height: 20,
-                        width: 20,
-                        child: Checkbox(
-                          value: false,
-                          onChanged: (value) {},
-                        ),
-                      ),
-                      const Gap(5),
-                      Text(
-                        "Remember Me",
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                          color: context.appColors.primary,
-                        ),
-                      ),
-                    ],
-                  ),
-                  InkWell(
-                    onTap: () {},
-                    child: Text(
-                      "Forgot Password?",
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w600,
-                        color: context.appColors.primary,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              const Gap(36),
+              const Gap(40),
               CustomButton(
                 height: 54,
                 borderRadius: 30,
@@ -133,7 +92,7 @@ class LoginScreen extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 24.0),
                         child: Text(
-                          "Log In",
+                          "Sign Up",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 16,
@@ -188,7 +147,7 @@ class LoginScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Don't have an account?",
+                    "Already have an account?",
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w600,
@@ -197,11 +156,9 @@ class LoginScreen extends StatelessWidget {
                   ),
                   const Gap(5),
                   InkWell(
-                    onTap: () {
-                      CustomNavigation.push(context, const SignUpScreen());
-                    },
+                    onTap: () => Navigator.of(context).pop(),
                     child: Text(
-                      "Form",
+                      "Login",
                       style: TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w600,
