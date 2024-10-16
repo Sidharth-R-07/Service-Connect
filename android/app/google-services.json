@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "727615182353",
+    "project_id": "service-connect-test",
+    "storage_bucket": "service-connect-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727615182353:android:b578283b93fb27723e43b0",
+        "android_client_info": {
+          "package_name": "com.example.service_connect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRz7w1x6Y8GcCP5VwnKJaS6m9my_egcQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
