@@ -7,6 +7,9 @@ import 'package:service_connect/core/utils/src/theme/app_fonts.dart';
 import 'package:service_connect/features/authetication/application/authentication_bloc.dart';
 import 'package:service_connect/features/authetication/domain/i_authetication_facade.dart';
 import 'package:service_connect/features/authetication/presentation/login_screen.dart';
+import 'package:service_connect/features/location/application/location_bloc.dart';
+import 'package:service_connect/features/location/domain/i_location_facade.dart';
+import 'package:service_connect/features/splash/presentation/splash_screen.dart';
 
 Future<void> main() async {
   await configureDependency();
@@ -24,6 +27,11 @@ class MyApp extends StatelessWidget {
         BlocProvider<AuthenticationBloc>(
           create: (context) => AuthenticationBloc(sl<IAutheticationFacade>()),
         ),
+
+        //LocationBloc
+        BlocProvider<LocationBloc>(
+          create: (context) => LocationBloc(sl<ILocationFacade>()),
+        ),
       ],
       child: MaterialApp(
         title: 'Service Connect',
@@ -35,7 +43,7 @@ class MyApp extends StatelessWidget {
               ColorScheme.fromSeed(seedColor: context.appColors.primary),
           useMaterial3: true,
         ),
-        home: const LoginScreen(),
+        home: const SplashScreen(),
       ),
     );
   }

@@ -45,6 +45,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
             (user) {
               emailController.clear();
               passwordController.clear();
+              context.read<AuthenticationBloc>().add(
+                    AuthenticationEvent.setUser(user),
+                  );
               CustomNavigation.pushAndRemoveUntil(context, const HomeScreen());
             },
           );

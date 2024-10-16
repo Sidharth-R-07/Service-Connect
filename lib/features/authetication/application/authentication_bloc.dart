@@ -26,6 +26,33 @@ class AuthenticationBloc
 
     //SIGN UP WITH EMAIL AND PASSWORD
     on<_SignUpWithEmailAndPassword>(_signUpWithEmailAndPassword);
+
+    //LOGOUT
+    on<_LogOut>(_logOut);
+
+    //SET USER
+    on<_SetUser>(_setUser);
+  }
+
+  void _setUser(
+    _SetUser event,
+    Emitter<AuthenticationState> emit,
+  ) {
+    emit(state.copyWith(user: event.user));
+  }
+
+  void _logOut(
+    _LogOut event,
+    Emitter<AuthenticationState> emit,
+  ) async {
+    emit(state.copyWith(
+      submitLoading: true,
+      result: null,
+    ));
+    final result = await _autheticationFacade.logout();
+    emit(state.copyWith(
+      submitLoading: false,
+    ));
   }
 
   Future<void> _signUpWithEmailAndPassword(

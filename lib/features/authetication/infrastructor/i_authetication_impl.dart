@@ -4,6 +4,7 @@ import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:injectable/injectable.dart';
 import 'package:service_connect/core/failures/failures.dart';
+import 'package:service_connect/core/services/local_storage_services.dart';
 import 'package:service_connect/core/utils/typedef/app_typedef.dart';
 import 'package:service_connect/features/authetication/domain/i_authetication_facade.dart';
 import 'package:service_connect/features/authetication/domain/model/user_model.dart';
@@ -11,7 +12,8 @@ import 'package:service_connect/features/authetication/domain/model/user_model.d
 @LazySingleton(as: IAutheticationFacade)
 class IAutheticationImpl implements IAutheticationFacade {
   final FirebaseAuth _firebaseAuth;
-  IAutheticationImpl(this._firebaseAuth);
+  final LocalStorageServices _localStorageServices;
+  IAutheticationImpl(this._firebaseAuth, this._localStorageServices);
 
   @override
   FutureResult<UserModel> loginWithEmailAndPassword({
@@ -24,6 +26,7 @@ class IAutheticationImpl implements IAutheticationFacade {
         password: password,
       );
       if (userCredential.user != null) {
+        await _localStorageServices.storeUserId(userCredential.user!.email!);
         return right(UserModel(
             id: userCredential.user!.uid, email: userCredential.user!.email!));
       } else {
@@ -51,6 +54,7 @@ class IAutheticationImpl implements IAutheticationFacade {
         password: password,
       );
       if (userCredential.user != null) {
+        await _localStorageServices.storeUserId(userCredential.user!.email!);
         return right(UserModel(
             id: userCredential.user!.uid, email: userCredential.user!.email!));
       } else {
@@ -69,6 +73,7 @@ class IAutheticationImpl implements IAutheticationFacade {
   FutureResult<bool> logout() async {
     try {
       await _firebaseAuth.signOut();
+      await _localStorageServices.clearUserId();
       return right(true);
     } on FirebaseAuthException catch (e) {
       return left(

@@ -17,7 +17,10 @@ import '../../../features/authetication/domain/i_authetication_facade.dart'
     as _i466;
 import '../../../features/authetication/infrastructor/i_authetication_impl.dart'
     as _i140;
+import '../../../features/location/domain/i_location_facade.dart' as _i937;
+import '../../../features/location/infrastructor/i_location_impl.dart' as _i78;
 import '../../services/local_storage_services.dart' as _i447;
+import '../../services/location_services.dart' as _i693;
 import 'firebase_injectable_module.dart' as _i574;
 
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -38,12 +41,17 @@ Future<_i174.GetIt> init(
   );
   gh.lazySingleton<_i447.LocalStorageServices>(
       () => _i447.LocalStorageServices());
+  gh.lazySingleton<_i693.LocationServices>(() => _i693.LocationServices());
   gh.lazySingleton<_i974.FirebaseFirestore>(
       () => firebaseInjectableModule.firestore);
   gh.lazySingleton<_i59.FirebaseAuth>(
       () => firebaseInjectableModule.firebaseAuth);
-  gh.lazySingleton<_i466.IAutheticationFacade>(
-      () => _i140.IAutheticationImpl(gh<_i59.FirebaseAuth>()));
+  gh.lazySingleton<_i937.ILocationFacade>(
+      () => _i78.ILocationImpl(gh<_i693.LocationServices>()));
+  gh.lazySingleton<_i466.IAutheticationFacade>(() => _i140.IAutheticationImpl(
+        gh<_i59.FirebaseAuth>(),
+        gh<_i447.LocalStorageServices>(),
+      ));
   return getIt;
 }
 

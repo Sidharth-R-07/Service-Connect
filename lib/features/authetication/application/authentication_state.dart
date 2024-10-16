@@ -7,6 +7,7 @@ class AuthenticationState with _$AuthenticationState {
     required bool rememberMe,
     required bool submitLoading,
     required FailureOrSuccess<UserModel?>? result,
+    required UserModel? user,
   }) = _AuthenticationState;
 
   factory AuthenticationState.initial() => const AuthenticationState(
@@ -14,5 +15,6 @@ class AuthenticationState with _$AuthenticationState {
         rememberMe: false,
         submitLoading: false,
         result: null,
+        user: null,
       );
 }

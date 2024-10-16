@@ -18,4 +18,6 @@ class AuthenticationEvent with _$AuthenticationEvent {
   }) = _SignUpWithEmailAndPassword;
 
   const factory AuthenticationEvent.logOut() = _LogOut;
+
+  const factory AuthenticationEvent.setUser(UserModel? user) = _SetUser;
 }
