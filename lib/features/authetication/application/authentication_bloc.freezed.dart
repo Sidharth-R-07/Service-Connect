@@ -26,6 +26,7 @@ mixin _$AuthenticationEvent {
         signUpWithEmailAndPassword,
     required TResult Function() logOut,
     required TResult Function(UserModel? user) setUser,
+    required TResult Function() clearLogoutResult,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,6 +38,7 @@ mixin _$AuthenticationEvent {
         signUpWithEmailAndPassword,
     TResult? Function()? logOut,
     TResult? Function(UserModel? user)? setUser,
+    TResult? Function()? clearLogoutResult,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +49,7 @@ mixin _$AuthenticationEvent {
     TResult Function(String email, String password)? signUpWithEmailAndPassword,
     TResult Function()? logOut,
     TResult Function(UserModel? user)? setUser,
+    TResult Function()? clearLogoutResult,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -61,6 +64,7 @@ mixin _$AuthenticationEvent {
         signUpWithEmailAndPassword,
     required TResult Function(_LogOut value) logOut,
     required TResult Function(_SetUser value) setUser,
+    required TResult Function(_ClearLogoutResult value) clearLogoutResult,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -74,6 +78,7 @@ mixin _$AuthenticationEvent {
         signUpWithEmailAndPassword,
     TResult? Function(_LogOut value)? logOut,
     TResult? Function(_SetUser value)? setUser,
+    TResult? Function(_ClearLogoutResult value)? clearLogoutResult,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -86,6 +91,7 @@ mixin _$AuthenticationEvent {
         signUpWithEmailAndPassword,
     TResult Function(_LogOut value)? logOut,
     TResult Function(_SetUser value)? setUser,
+    TResult Function(_ClearLogoutResult value)? clearLogoutResult,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -165,6 +171,7 @@ class _$TogglePasswordVisibilityImpl implements _TogglePasswordVisibility {
         signUpWithEmailAndPassword,
     required TResult Function() logOut,
     required TResult Function(UserModel? user) setUser,
+    required TResult Function() clearLogoutResult,
   }) {
     return togglePasswordVisibility();
   }
@@ -179,6 +186,7 @@ class _$TogglePasswordVisibilityImpl implements _TogglePasswordVisibility {
         signUpWithEmailAndPassword,
     TResult? Function()? logOut,
     TResult? Function(UserModel? user)? setUser,
+    TResult? Function()? clearLogoutResult,
   }) {
     return togglePasswordVisibility?.call();
   }
@@ -192,6 +200,7 @@ class _$TogglePasswordVisibilityImpl implements _TogglePasswordVisibility {
     TResult Function(String email, String password)? signUpWithEmailAndPassword,
     TResult Function()? logOut,
     TResult Function(UserModel? user)? setUser,
+    TResult Function()? clearLogoutResult,
     required TResult orElse(),
   }) {
     if (togglePasswordVisibility != null) {
@@ -212,6 +221,7 @@ class _$TogglePasswordVisibilityImpl implements _TogglePasswordVisibility {
         signUpWithEmailAndPassword,
     required TResult Function(_LogOut value) logOut,
     required TResult Function(_SetUser value) setUser,
+    required TResult Function(_ClearLogoutResult value) clearLogoutResult,
   }) {
     return togglePasswordVisibility(this);
   }
@@ -228,6 +238,7 @@ class _$TogglePasswordVisibilityImpl implements _TogglePasswordVisibility {
         signUpWithEmailAndPassword,
     TResult? Function(_LogOut value)? logOut,
     TResult? Function(_SetUser value)? setUser,
+    TResult? Function(_ClearLogoutResult value)? clearLogoutResult,
   }) {
     return togglePasswordVisibility?.call(this);
   }
@@ -243,6 +254,7 @@ class _$TogglePasswordVisibilityImpl implements _TogglePasswordVisibility {
         signUpWithEmailAndPassword,
     TResult Function(_LogOut value)? logOut,
     TResult Function(_SetUser value)? setUser,
+    TResult Function(_ClearLogoutResult value)? clearLogoutResult,
     required TResult orElse(),
   }) {
     if (togglePasswordVisibility != null) {
@@ -305,6 +317,7 @@ class _$ToggleRememberMeImpl implements _ToggleRememberMe {
         signUpWithEmailAndPassword,
     required TResult Function() logOut,
     required TResult Function(UserModel? user) setUser,
+    required TResult Function() clearLogoutResult,
   }) {
     return toggleRememberMe();
   }
@@ -319,6 +332,7 @@ class _$ToggleRememberMeImpl implements _ToggleRememberMe {
         signUpWithEmailAndPassword,
     TResult? Function()? logOut,
     TResult? Function(UserModel? user)? setUser,
+    TResult? Function()? clearLogoutResult,
   }) {
     return toggleRememberMe?.call();
   }
@@ -332,6 +346,7 @@ class _$ToggleRememberMeImpl implements _ToggleRememberMe {
     TResult Function(String email, String password)? signUpWithEmailAndPassword,
     TResult Function()? logOut,
     TResult Function(UserModel? user)? setUser,
+    TResult Function()? clearLogoutResult,
     required TResult orElse(),
   }) {
     if (toggleRememberMe != null) {
@@ -352,6 +367,7 @@ class _$ToggleRememberMeImpl implements _ToggleRememberMe {
         signUpWithEmailAndPassword,
     required TResult Function(_LogOut value) logOut,
     required TResult Function(_SetUser value) setUser,
+    required TResult Function(_ClearLogoutResult value) clearLogoutResult,
   }) {
     return toggleRememberMe(this);
   }
@@ -368,6 +384,7 @@ class _$ToggleRememberMeImpl implements _ToggleRememberMe {
         signUpWithEmailAndPassword,
     TResult? Function(_LogOut value)? logOut,
     TResult? Function(_SetUser value)? setUser,
+    TResult? Function(_ClearLogoutResult value)? clearLogoutResult,
   }) {
     return toggleRememberMe?.call(this);
   }
@@ -383,6 +400,7 @@ class _$ToggleRememberMeImpl implements _ToggleRememberMe {
         signUpWithEmailAndPassword,
     TResult Function(_LogOut value)? logOut,
     TResult Function(_SetUser value)? setUser,
+    TResult Function(_ClearLogoutResult value)? clearLogoutResult,
     required TResult orElse(),
   }) {
     if (toggleRememberMe != null) {
@@ -486,6 +504,7 @@ class _$LoginWithEmailAndPasswordImpl implements _LoginWithEmailAndPassword {
         signUpWithEmailAndPassword,
     required TResult Function() logOut,
     required TResult Function(UserModel? user) setUser,
+    required TResult Function() clearLogoutResult,
   }) {
     return loginWithEmailAndPassword(email, password);
   }
@@ -500,6 +519,7 @@ class _$LoginWithEmailAndPasswordImpl implements _LoginWithEmailAndPassword {
         signUpWithEmailAndPassword,
     TResult? Function()? logOut,
     TResult? Function(UserModel? user)? setUser,
+    TResult? Function()? clearLogoutResult,
   }) {
     return loginWithEmailAndPassword?.call(email, password);
   }
@@ -513,6 +533,7 @@ class _$LoginWithEmailAndPasswordImpl implements _LoginWithEmailAndPassword {
     TResult Function(String email, String password)? signUpWithEmailAndPassword,
     TResult Function()? logOut,
     TResult Function(UserModel? user)? setUser,
+    TResult Function()? clearLogoutResult,
     required TResult orElse(),
   }) {
     if (loginWithEmailAndPassword != null) {
@@ -533,6 +554,7 @@ class _$LoginWithEmailAndPasswordImpl implements _LoginWithEmailAndPassword {
         signUpWithEmailAndPassword,
     required TResult Function(_LogOut value) logOut,
     required TResult Function(_SetUser value) setUser,
+    required TResult Function(_ClearLogoutResult value) clearLogoutResult,
   }) {
     return loginWithEmailAndPassword(this);
   }
@@ -549,6 +571,7 @@ class _$LoginWithEmailAndPasswordImpl implements _LoginWithEmailAndPassword {
         signUpWithEmailAndPassword,
     TResult? Function(_LogOut value)? logOut,
     TResult? Function(_SetUser value)? setUser,
+    TResult? Function(_ClearLogoutResult value)? clearLogoutResult,
   }) {
     return loginWithEmailAndPassword?.call(this);
   }
@@ -564,6 +587,7 @@ class _$LoginWithEmailAndPasswordImpl implements _LoginWithEmailAndPassword {
         signUpWithEmailAndPassword,
     TResult Function(_LogOut value)? logOut,
     TResult Function(_SetUser value)? setUser,
+    TResult Function(_ClearLogoutResult value)? clearLogoutResult,
     required TResult orElse(),
   }) {
     if (loginWithEmailAndPassword != null) {
@@ -678,6 +702,7 @@ class _$SignUpWithEmailAndPasswordImpl implements _SignUpWithEmailAndPassword {
         signUpWithEmailAndPassword,
     required TResult Function() logOut,
     required TResult Function(UserModel? user) setUser,
+    required TResult Function() clearLogoutResult,
   }) {
     return signUpWithEmailAndPassword(email, password);
   }
@@ -692,6 +717,7 @@ class _$SignUpWithEmailAndPasswordImpl implements _SignUpWithEmailAndPassword {
         signUpWithEmailAndPassword,
     TResult? Function()? logOut,
     TResult? Function(UserModel? user)? setUser,
+    TResult? Function()? clearLogoutResult,
   }) {
     return signUpWithEmailAndPassword?.call(email, password);
   }
@@ -705,6 +731,7 @@ class _$SignUpWithEmailAndPasswordImpl implements _SignUpWithEmailAndPassword {
     TResult Function(String email, String password)? signUpWithEmailAndPassword,
     TResult Function()? logOut,
     TResult Function(UserModel? user)? setUser,
+    TResult Function()? clearLogoutResult,
     required TResult orElse(),
   }) {
     if (signUpWithEmailAndPassword != null) {
@@ -725,6 +752,7 @@ class _$SignUpWithEmailAndPasswordImpl implements _SignUpWithEmailAndPassword {
         signUpWithEmailAndPassword,
     required TResult Function(_LogOut value) logOut,
     required TResult Function(_SetUser value) setUser,
+    required TResult Function(_ClearLogoutResult value) clearLogoutResult,
   }) {
     return signUpWithEmailAndPassword(this);
   }
@@ -741,6 +769,7 @@ class _$SignUpWithEmailAndPasswordImpl implements _SignUpWithEmailAndPassword {
         signUpWithEmailAndPassword,
     TResult? Function(_LogOut value)? logOut,
     TResult? Function(_SetUser value)? setUser,
+    TResult? Function(_ClearLogoutResult value)? clearLogoutResult,
   }) {
     return signUpWithEmailAndPassword?.call(this);
   }
@@ -756,6 +785,7 @@ class _$SignUpWithEmailAndPasswordImpl implements _SignUpWithEmailAndPassword {
         signUpWithEmailAndPassword,
     TResult Function(_LogOut value)? logOut,
     TResult Function(_SetUser value)? setUser,
+    TResult Function(_ClearLogoutResult value)? clearLogoutResult,
     required TResult orElse(),
   }) {
     if (signUpWithEmailAndPassword != null) {
@@ -829,6 +859,7 @@ class _$LogOutImpl implements _LogOut {
         signUpWithEmailAndPassword,
     required TResult Function() logOut,
     required TResult Function(UserModel? user) setUser,
+    required TResult Function() clearLogoutResult,
   }) {
     return logOut();
   }
@@ -843,6 +874,7 @@ class _$LogOutImpl implements _LogOut {
         signUpWithEmailAndPassword,
     TResult? Function()? logOut,
     TResult? Function(UserModel? user)? setUser,
+    TResult? Function()? clearLogoutResult,
   }) {
     return logOut?.call();
   }
@@ -856,6 +888,7 @@ class _$LogOutImpl implements _LogOut {
     TResult Function(String email, String password)? signUpWithEmailAndPassword,
     TResult Function()? logOut,
     TResult Function(UserModel? user)? setUser,
+    TResult Function()? clearLogoutResult,
     required TResult orElse(),
   }) {
     if (logOut != null) {
@@ -876,6 +909,7 @@ class _$LogOutImpl implements _LogOut {
         signUpWithEmailAndPassword,
     required TResult Function(_LogOut value) logOut,
     required TResult Function(_SetUser value) setUser,
+    required TResult Function(_ClearLogoutResult value) clearLogoutResult,
   }) {
     return logOut(this);
   }
@@ -892,6 +926,7 @@ class _$LogOutImpl implements _LogOut {
         signUpWithEmailAndPassword,
     TResult? Function(_LogOut value)? logOut,
     TResult? Function(_SetUser value)? setUser,
+    TResult? Function(_ClearLogoutResult value)? clearLogoutResult,
   }) {
     return logOut?.call(this);
   }
@@ -907,6 +942,7 @@ class _$LogOutImpl implements _LogOut {
         signUpWithEmailAndPassword,
     TResult Function(_LogOut value)? logOut,
     TResult Function(_SetUser value)? setUser,
+    TResult Function(_ClearLogoutResult value)? clearLogoutResult,
     required TResult orElse(),
   }) {
     if (logOut != null) {
@@ -996,6 +1032,7 @@ class _$SetUserImpl implements _SetUser {
         signUpWithEmailAndPassword,
     required TResult Function() logOut,
     required TResult Function(UserModel? user) setUser,
+    required TResult Function() clearLogoutResult,
   }) {
     return setUser(user);
   }
@@ -1010,6 +1047,7 @@ class _$SetUserImpl implements _SetUser {
         signUpWithEmailAndPassword,
     TResult? Function()? logOut,
     TResult? Function(UserModel? user)? setUser,
+    TResult? Function()? clearLogoutResult,
   }) {
     return setUser?.call(user);
   }
@@ -1023,6 +1061,7 @@ class _$SetUserImpl implements _SetUser {
     TResult Function(String email, String password)? signUpWithEmailAndPassword,
     TResult Function()? logOut,
     TResult Function(UserModel? user)? setUser,
+    TResult Function()? clearLogoutResult,
     required TResult orElse(),
   }) {
     if (setUser != null) {
@@ -1043,6 +1082,7 @@ class _$SetUserImpl implements _SetUser {
         signUpWithEmailAndPassword,
     required TResult Function(_LogOut value) logOut,
     required TResult Function(_SetUser value) setUser,
+    required TResult Function(_ClearLogoutResult value) clearLogoutResult,
   }) {
     return setUser(this);
   }
@@ -1059,6 +1099,7 @@ class _$SetUserImpl implements _SetUser {
         signUpWithEmailAndPassword,
     TResult? Function(_LogOut value)? logOut,
     TResult? Function(_SetUser value)? setUser,
+    TResult? Function(_ClearLogoutResult value)? clearLogoutResult,
   }) {
     return setUser?.call(this);
   }
@@ -1074,6 +1115,7 @@ class _$SetUserImpl implements _SetUser {
         signUpWithEmailAndPassword,
     TResult Function(_LogOut value)? logOut,
     TResult Function(_SetUser value)? setUser,
+    TResult Function(_ClearLogoutResult value)? clearLogoutResult,
     required TResult orElse(),
   }) {
     if (setUser != null) {
@@ -1096,11 +1138,159 @@ abstract class _SetUser implements AuthenticationEvent {
 }
 
 /// @nodoc
+abstract class _$$ClearLogoutResultImplCopyWith<$Res> {
+  factory _$$ClearLogoutResultImplCopyWith(_$ClearLogoutResultImpl value,
+          $Res Function(_$ClearLogoutResultImpl) then) =
+      __$$ClearLogoutResultImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ClearLogoutResultImplCopyWithImpl<$Res>
+    extends _$AuthenticationEventCopyWithImpl<$Res, _$ClearLogoutResultImpl>
+    implements _$$ClearLogoutResultImplCopyWith<$Res> {
+  __$$ClearLogoutResultImplCopyWithImpl(_$ClearLogoutResultImpl _value,
+      $Res Function(_$ClearLogoutResultImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthenticationEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ClearLogoutResultImpl implements _ClearLogoutResult {
+  const _$ClearLogoutResultImpl();
+
+  @override
+  String toString() {
+    return 'AuthenticationEvent.clearLogoutResult()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ClearLogoutResultImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() togglePasswordVisibility,
+    required TResult Function() toggleRememberMe,
+    required TResult Function(String email, String password)
+        loginWithEmailAndPassword,
+    required TResult Function(String email, String password)
+        signUpWithEmailAndPassword,
+    required TResult Function() logOut,
+    required TResult Function(UserModel? user) setUser,
+    required TResult Function() clearLogoutResult,
+  }) {
+    return clearLogoutResult();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? togglePasswordVisibility,
+    TResult? Function()? toggleRememberMe,
+    TResult? Function(String email, String password)? loginWithEmailAndPassword,
+    TResult? Function(String email, String password)?
+        signUpWithEmailAndPassword,
+    TResult? Function()? logOut,
+    TResult? Function(UserModel? user)? setUser,
+    TResult? Function()? clearLogoutResult,
+  }) {
+    return clearLogoutResult?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? togglePasswordVisibility,
+    TResult Function()? toggleRememberMe,
+    TResult Function(String email, String password)? loginWithEmailAndPassword,
+    TResult Function(String email, String password)? signUpWithEmailAndPassword,
+    TResult Function()? logOut,
+    TResult Function(UserModel? user)? setUser,
+    TResult Function()? clearLogoutResult,
+    required TResult orElse(),
+  }) {
+    if (clearLogoutResult != null) {
+      return clearLogoutResult();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_TogglePasswordVisibility value)
+        togglePasswordVisibility,
+    required TResult Function(_ToggleRememberMe value) toggleRememberMe,
+    required TResult Function(_LoginWithEmailAndPassword value)
+        loginWithEmailAndPassword,
+    required TResult Function(_SignUpWithEmailAndPassword value)
+        signUpWithEmailAndPassword,
+    required TResult Function(_LogOut value) logOut,
+    required TResult Function(_SetUser value) setUser,
+    required TResult Function(_ClearLogoutResult value) clearLogoutResult,
+  }) {
+    return clearLogoutResult(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_TogglePasswordVisibility value)?
+        togglePasswordVisibility,
+    TResult? Function(_ToggleRememberMe value)? toggleRememberMe,
+    TResult? Function(_LoginWithEmailAndPassword value)?
+        loginWithEmailAndPassword,
+    TResult? Function(_SignUpWithEmailAndPassword value)?
+        signUpWithEmailAndPassword,
+    TResult? Function(_LogOut value)? logOut,
+    TResult? Function(_SetUser value)? setUser,
+    TResult? Function(_ClearLogoutResult value)? clearLogoutResult,
+  }) {
+    return clearLogoutResult?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_TogglePasswordVisibility value)? togglePasswordVisibility,
+    TResult Function(_ToggleRememberMe value)? toggleRememberMe,
+    TResult Function(_LoginWithEmailAndPassword value)?
+        loginWithEmailAndPassword,
+    TResult Function(_SignUpWithEmailAndPassword value)?
+        signUpWithEmailAndPassword,
+    TResult Function(_LogOut value)? logOut,
+    TResult Function(_SetUser value)? setUser,
+    TResult Function(_ClearLogoutResult value)? clearLogoutResult,
+    required TResult orElse(),
+  }) {
+    if (clearLogoutResult != null) {
+      return clearLogoutResult(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ClearLogoutResult implements AuthenticationEvent {
+  const factory _ClearLogoutResult() = _$ClearLogoutResultImpl;
+}
+
+/// @nodoc
 mixin _$AuthenticationState {
   bool get obscurePassword => throw _privateConstructorUsedError;
   bool get rememberMe => throw _privateConstructorUsedError;
   bool get submitLoading => throw _privateConstructorUsedError;
   Either<MainFailure, UserModel?>? get result =>
+      throw _privateConstructorUsedError;
+  Either<MainFailure, bool?>? get logoutResult =>
       throw _privateConstructorUsedError;
   UserModel? get user => throw _privateConstructorUsedError;
 
@@ -1122,6 +1312,7 @@ abstract class $AuthenticationStateCopyWith<$Res> {
       bool rememberMe,
       bool submitLoading,
       Either<MainFailure, UserModel?>? result,
+      Either<MainFailure, bool?>? logoutResult,
       UserModel? user});
 }
 
@@ -1144,6 +1335,7 @@ class _$AuthenticationStateCopyWithImpl<$Res, $Val extends AuthenticationState>
     Object? rememberMe = null,
     Object? submitLoading = null,
     Object? result = freezed,
+    Object? logoutResult = freezed,
     Object? user = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1163,6 +1355,10 @@ class _$AuthenticationStateCopyWithImpl<$Res, $Val extends AuthenticationState>
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
               as Either<MainFailure, UserModel?>?,
+      logoutResult: freezed == logoutResult
+          ? _value.logoutResult
+          : logoutResult // ignore: cast_nullable_to_non_nullable
+              as Either<MainFailure, bool?>?,
       user: freezed == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
@@ -1184,6 +1380,7 @@ abstract class _$$AuthenticationStateImplCopyWith<$Res>
       bool rememberMe,
       bool submitLoading,
       Either<MainFailure, UserModel?>? result,
+      Either<MainFailure, bool?>? logoutResult,
       UserModel? user});
 }
 
@@ -1204,6 +1401,7 @@ class __$$AuthenticationStateImplCopyWithImpl<$Res>
     Object? rememberMe = null,
     Object? submitLoading = null,
     Object? result = freezed,
+    Object? logoutResult = freezed,
     Object? user = freezed,
   }) {
     return _then(_$AuthenticationStateImpl(
@@ -1223,6 +1421,10 @@ class __$$AuthenticationStateImplCopyWithImpl<$Res>
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
               as Either<MainFailure, UserModel?>?,
+      logoutResult: freezed == logoutResult
+          ? _value.logoutResult
+          : logoutResult // ignore: cast_nullable_to_non_nullable
+              as Either<MainFailure, bool?>?,
       user: freezed == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
@@ -1239,6 +1441,7 @@ class _$AuthenticationStateImpl implements _AuthenticationState {
       required this.rememberMe,
       required this.submitLoading,
       required this.result,
+      required this.logoutResult,
       required this.user});
 
   @override
@@ -1250,11 +1453,13 @@ class _$AuthenticationStateImpl implements _AuthenticationState {
   @override
   final Either<MainFailure, UserModel?>? result;
   @override
+  final Either<MainFailure, bool?>? logoutResult;
+  @override
   final UserModel? user;
 
   @override
   String toString() {
-    return 'AuthenticationState(obscurePassword: $obscurePassword, rememberMe: $rememberMe, submitLoading: $submitLoading, result: $result, user: $user)';
+    return 'AuthenticationState(obscurePassword: $obscurePassword, rememberMe: $rememberMe, submitLoading: $submitLoading, result: $result, logoutResult: $logoutResult, user: $user)';
   }
 
   @override
@@ -1269,12 +1474,14 @@ class _$AuthenticationStateImpl implements _AuthenticationState {
             (identical(other.submitLoading, submitLoading) ||
                 other.submitLoading == submitLoading) &&
             (identical(other.result, result) || other.result == result) &&
+            (identical(other.logoutResult, logoutResult) ||
+                other.logoutResult == logoutResult) &&
             (identical(other.user, user) || other.user == user));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, obscurePassword, rememberMe, submitLoading, result, user);
+  int get hashCode => Object.hash(runtimeType, obscurePassword, rememberMe,
+      submitLoading, result, logoutResult, user);
 
   /// Create a copy of AuthenticationState
   /// with the given fields replaced by the non-null parameter values.
@@ -1292,6 +1499,7 @@ abstract class _AuthenticationState implements AuthenticationState {
       required final bool rememberMe,
       required final bool submitLoading,
       required final Either<MainFailure, UserModel?>? result,
+      required final Either<MainFailure, bool?>? logoutResult,
       required final UserModel? user}) = _$AuthenticationStateImpl;
 
   @override
@@ -1302,6 +1510,8 @@ abstract class _AuthenticationState implements AuthenticationState {
   bool get submitLoading;
   @override
   Either<MainFailure, UserModel?>? get result;
+  @override
+  Either<MainFailure, bool?>? get logoutResult;
   @override
   UserModel? get user;
 

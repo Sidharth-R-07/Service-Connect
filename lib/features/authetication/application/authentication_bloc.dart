@@ -32,6 +32,16 @@ class AuthenticationBloc
 
     //SET USER
     on<_SetUser>(_setUser);
+
+    //CLEAR LOGOUT RESULT
+    on<_ClearLogoutResult>(_clearLogoutResult);
+  }
+
+  void _clearLogoutResult(
+    _ClearLogoutResult event,
+    Emitter<AuthenticationState> emit,
+  ) {
+    emit(state.copyWith(logoutResult: null));
   }
 
   void _setUser(
@@ -48,10 +58,12 @@ class AuthenticationBloc
     emit(state.copyWith(
       submitLoading: true,
       result: null,
+      logoutResult: null,
     ));
     final result = await _autheticationFacade.logout();
     emit(state.copyWith(
       submitLoading: false,
+      logoutResult: result,
     ));
   }
 

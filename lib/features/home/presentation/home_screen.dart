@@ -6,6 +6,7 @@ import 'package:service_connect/core/utils/src/theme/app_colors.dart';
 import 'package:service_connect/core/widgets/custom_button.dart';
 import 'package:service_connect/core/widgets/custom_loading.dart';
 import 'package:service_connect/features/authetication/application/authentication_bloc.dart';
+import 'package:service_connect/features/authetication/presentation/widgets/logout_dilogue.dart';
 import 'package:service_connect/features/location/application/location_bloc.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -40,9 +41,10 @@ class HomeScreen extends StatelessWidget {
                 color: Colors.white,
               ),
               onPressed: () {
-                context
-                    .read<AuthenticationBloc>()
-                    .add(const AuthenticationEvent.logOut());
+                showDialog(
+                    context: context,
+                    barrierDismissible: false,
+                    builder: (context) => const LogoutDilogue());
               },
             ),
             const Gap(10)

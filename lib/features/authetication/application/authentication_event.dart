@@ -20,4 +20,6 @@ class AuthenticationEvent with _$AuthenticationEvent {
   const factory AuthenticationEvent.logOut() = _LogOut;
 
   const factory AuthenticationEvent.setUser(UserModel? user) = _SetUser;
+
+  const factory AuthenticationEvent.clearLogoutResult() = _ClearLogoutResult;
 }

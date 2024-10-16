@@ -45,6 +45,7 @@ class LocationServices {
 
     if (placemarks.isNotEmpty) {
       Placemark place = placemarks[0];
+      log(place.toJson().toString());
 
       return LocationModel(
         latitude: position.latitude,
