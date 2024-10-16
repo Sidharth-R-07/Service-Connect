@@ -13,6 +13,10 @@ import 'package:firebase_auth/firebase_auth.dart' as _i59;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
+import '../../../features/authetication/domain/i_authetication_facade.dart'
+    as _i466;
+import '../../../features/authetication/infrastructor/i_authetication_impl.dart'
+    as _i140;
 import '../../services/local_storage_services.dart' as _i447;
 import 'firebase_injectable_module.dart' as _i574;
 
@@ -38,6 +42,8 @@ Future<_i174.GetIt> init(
       () => firebaseInjectableModule.firestore);
   gh.lazySingleton<_i59.FirebaseAuth>(
       () => firebaseInjectableModule.firebaseAuth);
+  gh.lazySingleton<_i466.IAutheticationFacade>(
+      () => _i140.IAutheticationImpl(gh<_i59.FirebaseAuth>()));
   return getIt;
 }
 

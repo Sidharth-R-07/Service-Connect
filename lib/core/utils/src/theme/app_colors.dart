@@ -7,6 +7,8 @@ class AppColors {
   final Color scaffoldBg = const Color(0xFFd9d9db);
   final Color white = const Color(0xFFFFFFFF);
   final Color grey = const Color(0xffced3dc);
+  final Color black = const Color(0xFF000000);
+  final Color errror = const Color(0xFFff0000);
 }
 
 extension AppColorExtension on BuildContext {

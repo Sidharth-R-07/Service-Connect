@@ -40,6 +40,10 @@ class CustomTextField extends StatelessWidget {
         fillColor: context.appColors.secondary,
         filled: true,
         hintText: hintText,
+        errorStyle: TextStyle(
+          color: context.appColors.errror,
+          fontSize: 10,
+        ),
         hintStyle: TextStyle(
             color: context.appColors.white.withOpacity(.8), fontSize: 13),
         border: OutlineInputBorder(

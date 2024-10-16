@@ -1,15 +1,3 @@
-//NAME VALIDATION
-String? validateName(String? value) {
-  if (value == null || value.isEmpty) {
-    return 'Please enter name';
-  }
-
-  if (value.length < 2) {
-    return 'name must be at least 3 characters';
-  }
-  return null;
-}
-
 //EMAIL VALIDATION
 String? validateEmail(String? value) {
   if (value == null || value.isEmpty) {
