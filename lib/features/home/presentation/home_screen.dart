@@ -14,13 +14,15 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.read<LocationBloc>().add(const LocationEvent.getCurrentLocation());
+    context.read<LocationBloc>()
+      ..add(const LocationEvent.clearLocation())
+      ..add(const LocationEvent.getCurrentLocation());
     return BlocListener<LocationBloc, LocationState>(
       listener: (context, state) {
         if (state.result != null) {
           state.result!.fold(
             (l) => CustomToast.errorToast(l.errorMsg),
-            (r) => CustomToast.successToast('Location found'),
+            (r) => null,
           );
         }
       },
@@ -104,13 +106,15 @@ class HomeScreen extends StatelessWidget {
                   return state.result!.fold(
                     (l) => Column(
                       children: [
-                        const Text('Something went wrong!Location not found',
+                        const Text('Something went wrong!Try again',
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
                             )),
                         const Gap(10),
                         CustomButton(
+                          width: 100,
+                          height: 40,
                           color: context.appColors.grey,
                           onPressed: () {
                             context

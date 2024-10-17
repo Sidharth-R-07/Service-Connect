@@ -8,8 +8,6 @@ import 'package:service_connect/features/location/domain/model/location_model.da
 @lazySingleton
 class LocationServices {
   Future<LocationModel?> getCurrentLocation() async {
-    // Check if location services are enabled
-
     bool? serviceEnabled;
     LocationPermission? permission;
     log('Getting current location');
@@ -31,6 +29,10 @@ class LocationServices {
     }
 
     if (permission == LocationPermission.deniedForever) {
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.deniedForever) {
+        return Future.error('Location permissions are denied Forever');
+      }
       return Future.error('Location permissions are permanently denied.');
     }
 
@@ -56,5 +58,6 @@ class LocationServices {
         state: place.administrativeArea,
       );
     }
+    return null;
   }
 }

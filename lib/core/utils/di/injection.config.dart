@@ -19,6 +19,7 @@ import '../../../features/authetication/infrastructor/i_authetication_impl.dart'
     as _i140;
 import '../../../features/location/domain/i_location_facade.dart' as _i937;
 import '../../../features/location/infrastructor/i_location_impl.dart' as _i78;
+import '../../services/firebase_errors.dart' as _i1025;
 import '../../services/local_storage_services.dart' as _i447;
 import '../../services/location_services.dart' as _i693;
 import 'firebase_injectable_module.dart' as _i574;
@@ -46,12 +47,14 @@ Future<_i174.GetIt> init(
       () => firebaseInjectableModule.firestore);
   gh.lazySingleton<_i59.FirebaseAuth>(
       () => firebaseInjectableModule.firebaseAuth);
-  gh.lazySingleton<_i937.ILocationFacade>(
-      () => _i78.ILocationImpl(gh<_i693.LocationServices>()));
+  gh.lazySingleton<_i1025.FirebaseErrors>(() => _i1025.FirebaseErrors());
   gh.lazySingleton<_i466.IAutheticationFacade>(() => _i140.IAutheticationImpl(
         gh<_i59.FirebaseAuth>(),
         gh<_i447.LocalStorageServices>(),
+        gh<_i1025.FirebaseErrors>(),
       ));
+  gh.lazySingleton<_i937.ILocationFacade>(
+      () => _i78.ILocationImpl(gh<_i693.LocationServices>()));
   return getIt;
 }
 

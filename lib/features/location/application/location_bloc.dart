@@ -17,6 +17,11 @@ class LocationBloc extends Bloc<LocationEvent, LocationState> {
   LocationBloc(this._iLocationFacade) : super(LocationState.initial()) {
     //GET CURRENT LOCATION
     on<_GetCurrentLocation>(_getCurrentLocation);
+
+    //CLEAR LOCATION
+    on<_ClearLocation>((event, emit) {
+      emit(state.copyWith(location: null));
+    });
   }
 
   Future<void> _getCurrentLocation(

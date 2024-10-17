@@ -19,32 +19,38 @@ mixin _$LocationEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getCurrentLocation,
+    required TResult Function() clearLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getCurrentLocation,
+    TResult? Function()? clearLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getCurrentLocation,
+    TResult Function()? clearLocation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_ClearLocation value) clearLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_ClearLocation value)? clearLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_ClearLocation value)? clearLocation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -113,6 +119,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getCurrentLocation,
+    required TResult Function() clearLocation,
   }) {
     return getCurrentLocation();
   }
@@ -121,6 +128,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getCurrentLocation,
+    TResult? Function()? clearLocation,
   }) {
     return getCurrentLocation?.call();
   }
@@ -129,6 +137,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getCurrentLocation,
+    TResult Function()? clearLocation,
     required TResult orElse(),
   }) {
     if (getCurrentLocation != null) {
@@ -141,6 +150,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_ClearLocation value) clearLocation,
   }) {
     return getCurrentLocation(this);
   }
@@ -149,6 +159,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_ClearLocation value)? clearLocation,
   }) {
     return getCurrentLocation?.call(this);
   }
@@ -157,6 +168,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_ClearLocation value)? clearLocation,
     required TResult orElse(),
   }) {
     if (getCurrentLocation != null) {
@@ -168,6 +180,111 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
 
 abstract class _GetCurrentLocation implements LocationEvent {
   const factory _GetCurrentLocation() = _$GetCurrentLocationImpl;
+}
+
+/// @nodoc
+abstract class _$$ClearLocationImplCopyWith<$Res> {
+  factory _$$ClearLocationImplCopyWith(
+          _$ClearLocationImpl value, $Res Function(_$ClearLocationImpl) then) =
+      __$$ClearLocationImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ClearLocationImplCopyWithImpl<$Res>
+    extends _$LocationEventCopyWithImpl<$Res, _$ClearLocationImpl>
+    implements _$$ClearLocationImplCopyWith<$Res> {
+  __$$ClearLocationImplCopyWithImpl(
+      _$ClearLocationImpl _value, $Res Function(_$ClearLocationImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of LocationEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ClearLocationImpl implements _ClearLocation {
+  const _$ClearLocationImpl();
+
+  @override
+  String toString() {
+    return 'LocationEvent.clearLocation()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ClearLocationImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getCurrentLocation,
+    required TResult Function() clearLocation,
+  }) {
+    return clearLocation();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getCurrentLocation,
+    TResult? Function()? clearLocation,
+  }) {
+    return clearLocation?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getCurrentLocation,
+    TResult Function()? clearLocation,
+    required TResult orElse(),
+  }) {
+    if (clearLocation != null) {
+      return clearLocation();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_ClearLocation value) clearLocation,
+  }) {
+    return clearLocation(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_ClearLocation value)? clearLocation,
+  }) {
+    return clearLocation?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_ClearLocation value)? clearLocation,
+    required TResult orElse(),
+  }) {
+    if (clearLocation != null) {
+      return clearLocation(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ClearLocation implements LocationEvent {
+  const factory _ClearLocation() = _$ClearLocationImpl;
 }
 
 /// @nodoc
